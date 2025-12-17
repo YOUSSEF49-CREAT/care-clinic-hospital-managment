@@ -1,0 +1,129 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+  display: flex;
+}
+
+
+.content {
+  margin-left: 240px; 
+  padding: 30px;
+  width: 100%;
+}
+
+.content h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #f8fafc;
+}
+
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+.card {
+  background: #1e293b;
+  flex: 1 1 220px; 
+  max-width: 260px;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+.card h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card p {
+  font-size: 32px;
+  font-weight: bold;
+  color: #f1f5f9;
+}
+
+
+.patients { border-left: 6px solid #38bdf8; }
+.medecins { border-left: 6px solid #22c55e; }
+.departements { border-left: 6px solid #a855f7; }
+.info { border-left: 6px solid #0ea5e9; }
+.success { border-left: 6px solid #10b981; }
+.warning { border-left: 6px solid #f59e0b; }
+
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+  }
+  .card {
+    max-width: 100%;
+  }
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #020617; 
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.6);
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #cbd5f5;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar a:hover {
+  background: #1e293b;
+  color: #38bdf8;
+  transform: translateX(6px);
+}
+
+.sidebar a.active {
+  background: #1e293b;
+  color: #38bdf8;
+  box-shadow: inset 4px 0 0 #38bdf8;
+}
+
+.sidebar::before {
+  content: "CARE CLINIC";
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  letter-spacing: 1px;
+}
+
