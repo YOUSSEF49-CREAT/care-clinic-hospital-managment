@@ -3,11 +3,12 @@ include("../config/db.php");
 
 $id = $_GET['id'];
 
-// جلب معلومات الطبيب
+
 $res = mysqli_query($conn, "SELECT * FROM medecins WHERE id=$id");
 $row = mysqli_fetch_assoc($res);
 
-// update
+
+
 if (isset($_POST['update'])) {
     mysqli_query($conn, "
         UPDATE medecins SET
