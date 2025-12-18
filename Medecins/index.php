@@ -5,21 +5,48 @@
 <div class="content">
 <h2>Medecins</h2>
 
-<form method="post">
-  <input type="text" name="name" placeholder="Name" required>
-  <input type="text" name="phone" placeholder="Phone">
-  <input type="email" name="email" placeholder="Email">
-  <input type="text" name="address" placeholder="Address">
-  <input type="number" name="age" placeholder="Age">
+<form method="post" class="form-container">
 
-  <select name="departement">
-    <?php
-    $deps = mysqli_query($conn,"SELECT * FROM departements");
-    while($d = mysqli_fetch_assoc($deps)){
-      echo "<option value='{$d['id']}'>{$d['name']}</option>";
-    }
-    ?>
-  </select>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="text" id="phone" name="phone">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+  </div>
+
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address">
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age">
+  </div>
+
+  <div class="form-group">
+    <label for="departement">Departement</label>
+    <select id="departement" name="departement">
+      <?php
+      $deps = mysqli_query($conn,"SELECT * FROM departements");
+      while($d = mysqli_fetch_assoc($deps)){
+        echo "<option value='{$d['id']}'>{$d['name']}</option>";
+      }
+      ?>
+    </select>
+  </div>
+
+  <button type="submit">Save</button>
+</form>
+
 
   <button name="add">Add</button>
 </form>

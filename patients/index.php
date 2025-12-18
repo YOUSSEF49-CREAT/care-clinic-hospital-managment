@@ -4,24 +4,45 @@
 
 <div class="content">
 <h2>Patients</h2>
+<form method="post" class="form-container">
 
-<form method="post">
-  <input type="text" name="name" placeholder="Name" required>
-  <input type="text" name="phone" placeholder="Phone">
-  <input type="text" name="address" placeholder="Address">
-  <input type="number" name="age" placeholder="Age">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
 
-  <select name="medecin">
-    <?php
-    $med = mysqli_query($conn,"SELECT * FROM medecins");
-    while($m = mysqli_fetch_assoc($med)){
-      echo "<option value='{$m['id']}'>{$m['name']}</option>";
-    }
-    ?>
-  </select>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="text" id="phone" name="phone">
+  </div>
 
-  <button name="add">Add</button>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address">
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" min="0">
+  </div>
+
+  <div class="form-group">
+    <label for="medecin">Médecin</label>
+    <select id="medecin" name="medecin" required>
+      <option value="">-- Select médecin --</option>
+      <?php
+      $med = mysqli_query($conn,"SELECT * FROM medecins");
+      while($m = mysqli_fetch_assoc($med)){
+        echo "<option value='{$m['id']}'>{$m['name']}</option>";
+      }
+      ?>
+    </select>
+  </div>
+
+  <button type="submit" name="add">Add</button>
+
 </form>
+
 
 <?php
 if(isset($_POST['add'])){

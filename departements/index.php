@@ -9,10 +9,15 @@ include("../includes/sidebar.php");
 
 <div class="content">
 <h2>Départements</h2>
+<form method="post" class="form-container">
 
-<form method="post">
-  <input type="text" name="name" placeholder="Département name" required>
-  <button name="add">Add</button>
+  <div class="form-group">
+    <label for="name">Département name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+
+  <button type="submit" name="add">Add</button>
+
 </form>
 
 <?php
