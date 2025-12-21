@@ -1,4 +1,7 @@
-<?php include("../config/db.php"); ?>
+<?php 
+include "../auth.php";
+include("../config/db.php");
+ ?>
 <link rel="stylesheet" href="../assets/style.css">
 <?php include("../includes/sidebar.php"); ?>
 

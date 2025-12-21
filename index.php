@@ -1,4 +1,5 @@
 <?php
+include "auth.php";
 include("config/db.php");
 
 $patientsCount = mysqli_num_rows(mysqli_query($conn," SELECT * FROM patients"));

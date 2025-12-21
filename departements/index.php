@@ -1,4 +1,5 @@
 <?php
+include "../auth.php";
 include("../config/db.php");
 ?>
 <link rel="stylesheet" href="../assets/style.css">

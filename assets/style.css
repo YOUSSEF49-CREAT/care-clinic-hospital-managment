@@ -479,4 +479,42 @@ h2 {
 .btn.cancel:hover {
   background: #636e72;
 }
+.SignUp {
+    width: 320px;
+    margin: 100px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.SignUp input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.SignUp input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.SignUp button {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.SignUp button:hover {
+    background: #43a047;
+}
 
